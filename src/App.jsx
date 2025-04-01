@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./components/home/HomePage";
 import NotFound from "./components/ui/NotFound";
 import ProductPage from "./components/product/ProductPage";
 import CartPage from "./components/cart/CartPage";
-import CheckoutPage from "./components/checkout/Checkoutpage";
+import CheckoutPage from "./components/checkout/CheckoutPage";
 import LoginPage from "./components/user/loginPage";
 import ProtectedRoute from "./components/ui/ProtectedRoute";
 import api from "./api";
