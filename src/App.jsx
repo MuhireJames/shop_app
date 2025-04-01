@@ -7,7 +7,7 @@ import NotFound from "./components/ui/NotFound";
 import ProductPage from "./components/product/ProductPage";
 import CartPage from "./components/cart/CartPage";
 import CheckoutPage from "./components/checkout/CheckoutPage";
-import LoginPage from "./components/user/loginPage";
+import LoginPage from "./components/user/LoginPage";
 import ProtectedRoute from "./components/ui/ProtectedRoute";
 import api from "./api";
 import { AuthProvider } from "./context/AuthContext";
