@@ -69,7 +69,7 @@ function Footer() {
         <div className="row">
           <div className="col">
             <div className="text-sm mb-0">
-              All reserved &copy; {new Date().getFullYear()} QwickMart
+              QuickMart || All reserved &copy; {new Date().getFullYear()}
             </div>
           </div>
         </div>

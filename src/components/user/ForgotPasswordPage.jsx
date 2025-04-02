@@ -24,7 +24,6 @@ function ForgotPasswordPage() {
                     className="form-control"
                     id="email"
                     name="email"
-                    value="email"
                     placeholder="Enter Your Email"
                     required
                   />

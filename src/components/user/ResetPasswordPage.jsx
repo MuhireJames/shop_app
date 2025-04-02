@@ -36,7 +36,6 @@ function ResetPasswordPage() {
                     className="form-control"
                     id="confirmPassword"
                     name="confirmPassword"
-                    value="confirmPassword"
                     placeholder="Confirm Your New Password"
                     required
                   />
