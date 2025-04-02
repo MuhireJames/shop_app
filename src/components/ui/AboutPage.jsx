@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 const AboutPage = () => {
   return (
-    <Container className="my-5">
+    <Container className="my-5 py-4">
       <Row className="text-center mb-4">
         <Col>
           <h1>About QuickMart</h1>

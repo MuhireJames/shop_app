@@ -1,27 +1,4 @@
-import React, { useState } from "react";
-import api from "../../api";
-import { toast } from "react-toastify";
-
 function ForgotPasswordPage() {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-      await api.post("password_reset/", { email });
-
-    } catch (error) {
-      toast.error("Failed to send password reset link: " + error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div
       className="container my-5"
@@ -37,7 +14,7 @@ function ForgotPasswordPage() {
               </p>
             </div>
             <div className="card-body">
-              <form onSubmit={handleSubmit}>
+              <form>
                 <div className="form-group mb-3">
                   <label htmlFor="email" className="form-label">
                     Email
@@ -47,8 +24,7 @@ function ForgotPasswordPage() {
                     className="form-control"
                     id="email"
                     name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value="email"
                     placeholder="Enter Your Email"
                     required
                   />
@@ -56,9 +32,8 @@ function ForgotPasswordPage() {
                 <button
                   type="submit"
                   className="btn btn-primary btn-block w-100 mb-2"
-                  disabled={loading}
                 >
-                  {loading?"resetting":"Send Reset Link"}
+                  Send Reset Link
                 </button>
               </form>
             </div>
