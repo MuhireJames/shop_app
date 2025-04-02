@@ -25,7 +25,7 @@ function Footer() {
               About
             </a>
             <a
-              href="/shop"
+              href="/"
               className="text-white text-decoration-none mx-2 hover:underline"
             >
               Shop

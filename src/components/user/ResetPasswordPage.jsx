@@ -8,8 +8,9 @@ function ResetPasswordPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const location = useLocation();
-  const navigate = useNavigate();
+
+  const navigate = useNavigate()
+  const location=useLocation()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,13 +23,10 @@ function ResetPasswordPage() {
 
     const queryParams = new URLSearchParams(location.search);
     const token = queryParams.get("token");
-    const uid = queryParams.get("uid");
-
     try {
-      await api.post("reset_password/", {
-        uid,
-        token,
-        new_password: password,
+      await api.post("password_reset/confirm/", {
+        password: data.password, 
+        token: token
       });
       toast.success("Password reset successfully!");
       navigate("/login");

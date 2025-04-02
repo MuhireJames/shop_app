@@ -101,7 +101,7 @@ function LoginPage() {
               <div className="mt-2">
                 <p className="text-center">
                   Forgot Password?
-                  <Link to="/request_password_reset">Reset Password</Link>
+                  <Link to="/request/password_reset">Reset Password</Link>
                 </p>
                 <p className="text-center">
                   Don't have an account?

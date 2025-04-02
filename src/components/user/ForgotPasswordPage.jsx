@@ -6,14 +6,15 @@ function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      await api.post("request_password_reset/", { email });
-      toast.success("Password reset link sent to your email!");
-      setEmail("");
+      await api.post("password_reset/", { email });
+
     } catch (error) {
       toast.error("Failed to send password reset link: " + error.message);
     } finally {
@@ -57,7 +58,7 @@ function ForgotPasswordPage() {
                   className="btn btn-primary btn-block w-100 mb-2"
                   disabled={loading}
                 >
-                  {loading ? "Sending..." : "Send Reset Link"}
+                  {loading?"resetting":"Send Reset Link"}
                 </button>
               </form>
             </div>

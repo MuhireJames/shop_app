@@ -9,6 +9,8 @@ import CartPage from "./components/cart/CartPage";
 import CheckoutPage from "./components/checkout/CheckoutPage";
 import LoginPage from "./components/user/LoginPage";
 import ProtectedRoute from "./components/ui/ProtectedRoute";
+import AboutPage from "./components/ui/AboutPage"
+import ContactPage from "./components/ui/ContactPage"
 import api from "./api";
 import { AuthProvider } from "./context/AuthContext";
 import SignupPage from "./components/user/SignupPage";
@@ -68,10 +70,12 @@ function App() {
               element={<PaymentStatusPage setNumCartItems={setNumCartItems} />}
             />
             <Route
-              path="/request_password_reset"
+              path="request/password_reset"
               element={<ForgotPasswordPage />}
             />
-            <Route path="/reset_password" element={<ResetPasswordPage />} />
+            <Route path="password-reset/:token" element={<ResetPasswordPage />} />
+            <Route path="about" element={<AboutPage/>}/>
+            <Route path="contact" element={<ContactPage/>}/>
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
